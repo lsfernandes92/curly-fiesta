@@ -3,7 +3,11 @@ describe 'Using matchers' do
   # rspec-rails offers a number of custom
   # matchers, most of which are rspec-compatible
   # wrappers for Rails’ assertions.
-  # Here is one example using the 'eq' matcher:
+  # This file has one example using the 'eq' matcher
+  # # Other matchers can be found here:
+  # https://rspec.info/features/6-0/rspec-rails/matchers/
+  # Or here:
+  # https://rspec.info/features/3-12/rspec-expectations/
   context '#sum' do
     it 'returns the sum of two numbers' do
       result = subject.sum(1, 2)
@@ -11,9 +15,4 @@ describe 'Using matchers' do
       expect(result).to eq(3)
     end
   end
-
-  # Other matchers can be found here:
-  # https://rspec.info/features/6-0/rspec-rails/matchers/
-  # Or here:
-  # https://rspec.info/features/3-12/rspec-expectations/
 end
