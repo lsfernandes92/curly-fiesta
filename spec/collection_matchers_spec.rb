@@ -4,5 +4,6 @@ describe 'Using collection operator matchers' do
     it { is_expected.not_to include(4) }
     it { is_expected.to match([1, 2, 3]) }
     it { is_expected.to contain_exactly(1, 2, 3) }
+    it { is_expected.to all(be_an(Integer)) }
   end
 end
