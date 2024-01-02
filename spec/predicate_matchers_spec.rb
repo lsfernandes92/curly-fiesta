@@ -8,4 +8,13 @@ describe 'Using predicate methods' do
     it { is_expected.not_to be_empty }
     it { is_expected.not_to be_nil }
   end
+
+  describe 'Hash predicate methods' do
+    let(:foo_hash) { {
+      foo: 'foo',
+      name: 'name'
+    } }
+
+    it { expect(foo_hash).to have_key(:foo) }
+  end
 end
