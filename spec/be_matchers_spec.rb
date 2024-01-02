@@ -1,4 +1,4 @@
-describe 'Using matchers' do
+describe 'Using be matchers' do
   # There are several related 'be' matchers
   # Some are listed in this file and other can be found here:
   # https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/be/
