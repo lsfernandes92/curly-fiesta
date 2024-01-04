@@ -25,7 +25,7 @@
 # Link reference: https://rspec.info/features/3-12/rspec-mocks/verifying-doubles/
 class User < Struct.new(:notifier)
   def suspend!
-    notifier.notify("suspended as")
+    notifier.notify('suspended as')
   end
 end
 
@@ -38,9 +38,9 @@ end
 describe User, '#suspend!' do
   context 'passes when method implemented' do
     it 'notifies the console' do
-      notifier = instance_double("ConsoleNotifier")
+      notifier = instance_double('ConsoleNotifier')
   
-      expect(notifier).to receive(:notify).with("suspended as")
+      expect(notifier).to receive(:notify).with('suspended as')
   
       user = User.new(notifier)
       user.suspend!
