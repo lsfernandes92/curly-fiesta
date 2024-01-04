@@ -19,6 +19,15 @@ require_relative 'helpers/fruit_helper'
 RSpec.configure do |config|
   # We can also include helper module as the follwing:
   config.include FruitHelper
+  config.mock_with :rspec do |mocks|
+
+    # This option should be set when all dependencies are being loaded
+    # before a spec run, as is the case in a typical spec helper. It will
+    # cause any verifying double instantiation for a class that does not
+    # exist to raise, protecting against incorrectly spelt names.
+    mocks.verify_doubled_constant_names = true
+
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
